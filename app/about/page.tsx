@@ -43,13 +43,8 @@ export default function AboutPage() {
           solutions to problems and working with others to deliver software
           that makes an impact.
         </p>
-        <p>
-          [Replace this paragraph with your story: how you got into software,
-          what you&apos;ve been working on lately, and what kinds of problems
-          pull you in.]
-        </p>
         <ul className="list-disc">
-          <li>Software</li>
+          <li>Placeholder</li>
           <li>Recently working with natural language processing and predicting outcomes of prs</li>
           <li>Working on improving my website portfolio and learning more about the react framework</li>
         </ul>
