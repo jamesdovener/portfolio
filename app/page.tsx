@@ -2,10 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 import ContactButton from "@/components/ContactButton";
+import ContributionGraph from "@/components/ContributionGraph";
 
 export default function Page() {
   return (
-    <main className="flex flex-1 items-center justify-center px-6 py-24">
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center gap-20 px-6 py-24">
       <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:gap-16">
         <div className="max-w-2xl text-center md:text-left">
           <h1 className="text-yex font-bold tracking-tight sm:text-6xl">
@@ -49,6 +50,15 @@ export default function Page() {
           />
         </div>
       </div>
+
+      <section className="w-full overflow-x-auto">
+        <h2 className="text-sm font-semibold tracking-tight text-foreground/60">
+          Recent GitHub activity
+        </h2>
+        <div className="mt-4">
+          <ContributionGraph />
+        </div>
+      </section>
     </main>
   );
 }
