@@ -23,12 +23,12 @@ const principles = [
     body: "Smaller changes are easier to review, easier to roll back, and ship sooner.",
   },
   {
-    title: "Read the code first.",
-    body: "Most bugs aren't where you think they are. Reading wide before writing narrow saves time.",
+    title: "Understand the code first.",
+    body: "Before working on a piece of code, try to understand how it fits into the larger system.",
   },
   {
     title: "Optimize for clarity.",
-    body: "Clever code reads well to its author for about a week. Clear code keeps reading well for years.",
+    body: "The most concise code is not always the best code. Write code for the next developer.",
   },
 ];
 
