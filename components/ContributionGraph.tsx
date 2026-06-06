@@ -1,24 +1,38 @@
 "use client";
 
-import { GitHubCalendar } from "react-github-calendar";
+import { ActivityCalendar,ThemeInput } from "react-activity-calendar";
+import { useEffect, useState } from 'react';
 
 // The calendar fetches your data from a public proxy API on mount, so it has
 // to run in the browser — hence "use client". The homepage stays a server
 // component and just renders this inside it.
 export default function ContributionGraph() {
-  return (
-    <div className="text-foreground/70">
-      <GitHubCalendar
-        username="jamesdovener"
-        // Set year to current year
-          year = {new Date().getFullYear()}
-        // One color ramp per scheme; the lib picks based on the OS theme.
-        theme={{
-          light: ["#ededed", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-          dark: ["#1f1f1f", "#0e4429", "#006d32", "#26a641", "#39d353"],
-        }}
-        fontSize={12}
-      />
-    </div>
-  );
+    const [data, setData] = useState(null);
+    const username = "jamesdovener";
+    const currentYear = new Date().getFullYear();
+
+    useEffect(() => {
+        fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=${currentYear}`)
+            .then(res => res.json())
+            .then(res => setData(res.contributions));
+    }, [username, currentYear]);
+
+
+
+    if(!data) return <p>Loading contributions...</p>;
+
+    const githubColorTheme: ThemeInput = {
+        light: ['#EFF2F5', '#ACEEBB', '#4AC26B', '#2DA44E', '#116329'],
+
+
+    }
+
+    return(
+        <ActivityCalendar
+            data={data}
+            theme={githubColorTheme}
+            minLevel={0}
+            maxLevel={4}
+        />
+    );
 }
