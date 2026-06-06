@@ -44,9 +44,9 @@ export default function AboutPage() {
           that makes an impact.
         </p>
         <ul className="list-disc">
-          <li>Placeholder</li>
-          <li>Recently working with natural language processing and predicting outcomes of prs</li>
-          <li>Working on improving my website portfolio and learning more about the react framework</li>
+          <li>Currently looking for entry-level software developer positions.</li>
+          <li>Recently working with natural language processing and predicting outcomes of prs.</li>
+          <li>Working on improving my website portfolio and learning more about the react framework.</li>
         </ul>
       </section>
 
