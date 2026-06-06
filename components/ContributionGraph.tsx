@@ -10,6 +10,8 @@ export default function ContributionGraph() {
     <div className="text-foreground/70">
       <GitHubCalendar
         username="jamesdovener"
+        // Set year to current year
+          year = {new Date().getFullYear()}
         // One color ramp per scheme; the lib picks based on the OS theme.
         theme={{
           light: ["#ededed", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
