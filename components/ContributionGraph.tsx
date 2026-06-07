@@ -23,6 +23,7 @@ export default function ContributionGraph() {
 
     const githubColorTheme: ThemeInput = {
         light: ['#EFF2F5', '#ACEEBB', '#4AC26B', '#2DA44E', '#116329'],
+        dark: ['#eff2f529', '#ACEEBB', '#4AC26B', '#2DA44E', '#116329'],
 
 
     }
