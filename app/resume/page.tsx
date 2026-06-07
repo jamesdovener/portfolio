@@ -8,7 +8,19 @@ export default function ResumePage(){
             <a
                 href="/resume.pdf"
                 download
-                className="self-end rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-700"
+                className="   self-end rounded-lg
+
+                            text-white
+                            bg-neutral-900
+                            dark:text-black dark:bg-white
+                            px-4
+                            py-2
+                            text-sm
+                            font-medium
+
+                            transition
+                            hover:bg-neutral-700
+                            active:bg-neutral-700"
             >
                 Download PDF
             </a>
@@ -20,6 +32,7 @@ export default function ResumePage(){
 
             <div className="flex flex-col items-center gap-4 lg:hidden">
                 <Image
+                    className={"border-2 border-neutral-400"}
                     src="/resume-p1.png"
                     alt={"Resume Page 1"}
                     width={500}
@@ -27,6 +40,7 @@ export default function ResumePage(){
                 />
 
                 <Image
+                    className={"border-2 border-neutral-400"}
                     src="/resume-p2.png"
                     alt="Resume Page 2"
                     width={500}
