@@ -28,7 +28,7 @@ const projects: Project[] = [
       "My dissertation project which used machine learning techniques to predict the merge probability of pull " +
         "requests using the information available at the time of their creation.",
     tags: ["Python", "PostgreSQL", "Machine Learning", "XGBoost", "Pandas"],
-    repoUrl: "https://github.com/jamesdovener",
+    repoUrl: "https://github.com/jamesdovener/PR-Triage-Assistant/",
   },
   {
     name: "CIFAR-10 Image Classification Project",
